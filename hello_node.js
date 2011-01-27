@@ -1,4 +1,6 @@
 var http = require('http');
+var mongoose = require('mongoose').Mongoose;
+
 var messages = [];
 
 function main = function(req,res)
