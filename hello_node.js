@@ -11,7 +11,9 @@ function main = function(req,res)
     }
     else if (req.url !== '/favicon.ico')
     {
-        messages.push(decodeURIComponent(req.url.substr(1)))
+        var message = decodeURIComponent(req.url.substr(1));
+        messages.push(message);
+        console.log('Recieve message: '+message);
         res.write(messages.join("\n"));
         res.write('ok');
     }
